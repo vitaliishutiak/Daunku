@@ -37,6 +37,44 @@ app.post('/add-goods',async (req,res)=>{
     
 })
 
+
+
+app.get('/goods',async(req,res)=>{
+    try{
+        const goods = await Goods.find()
+        res.json(goods)
+    }
+    catch(err){
+        res.status(500).json({message:err})
+    }
+})
+
+
+
+app.delete('/goods/:id',async (req,res)=>{
+    try{
+        const id = req.params.id
+        console.log(id)
+        await Goods.findByIdAndDelete(id)
+        res.status(204).json({message:"successful"})
+    }
+    catch(err){
+        res.status(500).json({message:err})
+    }
+})
+
+app.put('/edit-goods/:id',async(req,res)=>{
+    try{
+        const goods = await Goods.findByIdAndUpdate(req.params.id ,req.body, {new:true})
+        res.status(201).json(goods)
+    }
+    catch(err){
+        res.status(400).json({message:err})
+    }
+})
+
+
+
 app.listen(port,()=>{
     console.log('server work')
 })
