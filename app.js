@@ -16,9 +16,28 @@ mongoose.connect(`mongodb+srv://root:${process.env.PASSWORD}@cluster0.1vatyqo.mo
 })
 
 const Goods = mongoose.model('Goods',{title:String,price:Number})
+const Contacts = mongoose.model('Contacts',{phone:String,addres:String,mail:String}) 
 
 app.get('/admin',(req,res)=>{
     res.sendFile(path.join(__dirname,'public','admin','index.html'))
+})
+
+app.post('/contact',async (req,res)=>{
+    try{
+
+        const {phone} = req.body
+        const {addres} = req.body
+        const {mail} = req.body
+
+        const contact = new Contacts({phone,addres,mail})
+        await contact.save()
+        console.log('goods created')
+        res.status(201).json(contact)
+    }
+    catch(err){
+        res.status(500).json({message:err})
+    }
+    
 })
 
 app.post('/add-goods',async (req,res)=>{
@@ -70,6 +89,17 @@ app.put('/edit-goods/:id',async(req,res)=>{
     }
     catch(err){
         res.status(400).json({message:err})
+    }
+})
+
+
+app.put('/edit-contacts/:id',async (req,res)=>{
+    try{
+        const contact = await Contacts.findByIdAndUpdate(req.params.id ,req.body, {new:true})
+        res.status(201).json(contact)
+    }
+    catch(err){
+        res.status(500).json({message:err})
     }
 })
 
