@@ -2,4 +2,158 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Work Sans";
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .firstPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("./main_img/modern-living-room-interior-with-sofa-green-plants-lamp-table-dark-wall-background 1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.wrap .firstPage header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  align-items: center;
+  transition: 0.2s;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.wrap .firstPage header .logo {
+  cursor: pointer;
+}
+.wrap .firstPage header ul {
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+.wrap .firstPage header ul .gradientText {
+  background-image: linear-gradient(to right, #2AF699, #009EFD);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.wrap .firstPage header ul li {
+  list-style: none;
+  font-size: 18px;
+  margin: 0 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.wrap .firstPage header .cartContainer {
+  display: flex;
+  cursor: pointer;
+}
+.wrap .firstPage header .cartContainer .current {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #2AF699, #009EFD);
+  color: #2D3949;
+  margin-left: -11px;
+  font-size: 15px;
+}
+.wrap .firstPage header i {
+  display: none;
+}
+.wrap .firstPage .homePage {
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 10vh;
+}
+.wrap .firstPage .homePage h1 {
+  margin-top: 45px;
+  font-size: 45px;
+  color: #fff;
+}
+.wrap .firstPage .homePage p {
+  margin-top: 50px;
+  color: #fff;
+  font-size: 18px;
+}
+.wrap .firstPage .homePage .searchContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.wrap .firstPage .homePage .searchContainer input {
+  width: 350px;
+  height: 45px;
+  border-radius: 30px;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 0 45px 0 15px;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  background-color: rgba(213, 213, 213, 0.3);
+  color: #fff;
+}
+.wrap .firstPage .homePage .searchContainer input::-moz-placeholder {
+  color: #fff;
+}
+.wrap .firstPage .homePage .searchContainer input::placeholder {
+  color: #fff;
+}
+.wrap .firstPage .homePage .searchContainer button {
+  background-image: linear-gradient(to right, #2AF699, #009EFD);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin-left: -40px;
+  z-index: 1;
+}
+.wrap .firstPage .homePage .SvgContainer {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 827px) {
+  .wrap .firstPage header ul {
+    display: none;
+  }
+  .wrap .firstPage header ul li {
+    transition: 2s;
+  }
+  .wrap .firstPage header .cartContainer {
+    display: none;
+  }
+  .wrap .firstPage header #burger {
+    display: flex;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .wrap .firstPage header #exitBurger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
