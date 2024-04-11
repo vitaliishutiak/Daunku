@@ -190,58 +190,58 @@
   flex-wrap: wrap;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard1 {
-  width: 230px;
+  width: 300px;
   height: 400px;
   background-color: #C1D0E4;
   display: flex;
   align-items: flex-end;
   border-radius: 40px;
-  margin: 50px;
+  margin: 50px 10px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard1 .productCardContent1 {
-  width: 230px;
+  width: 300px;
   height: 200px;
   background-color: #fff;
   border-radius: 40px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard2 {
-  width: 230px;
+  width: 300px;
   height: 400px;
   background-color: #C1D0E4;
   display: flex;
   align-items: flex-end;
   border-radius: 40px;
-  margin: 50px;
+  margin: 50px 10px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard2 .productCardContent2 {
-  width: 230px;
+  width: 300px;
   height: 200px;
   background-color: #fff;
   border-radius: 40px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard3 {
-  width: 230px;
+  width: 300px;
   height: 400px;
   background-color: #C1D0E4;
   display: flex;
   align-items: flex-end;
   border-radius: 40px;
-  margin: 50px;
+  margin: 50px 10px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard3 .productCardContent3 {
-  width: 230px;
+  width: 300px;
   height: 200px;
   background-color: #fff;
   border-radius: 40px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard4 {
-  width: 230px;
+  width: 300px;
   height: 400px;
   background-color: #C1D0E4;
   display: flex;
   align-items: flex-end;
   border-radius: 40px;
-  margin: 50px;
+  margin: 50px 10px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard4 .productCardContent4 {
   width: 300px;
@@ -250,13 +250,13 @@
   border-radius: 40px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard5 {
-  width: 230px;
+  width: 300px;
   height: 400px;
   background-color: #C1D0E4;
   display: flex;
   align-items: flex-end;
   border-radius: 40px;
-  margin: 50px;
+  margin: 50px 10px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard5 .productCardContent5 {
   width: 300px;
@@ -265,19 +265,116 @@
   border-radius: 40px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard6 {
-  width: 230px;
+  width: 300px;
   height: 400px;
   background-color: #C1D0E4;
   display: flex;
   align-items: flex-end;
   border-radius: 40px;
-  margin: 50px;
+  margin: 50px 10px;
 }
 .wrap .secondPage .productDetailsContainer .productCardContainer .productCard6 .productCardContent6 {
-  width: 230px;
+  width: 300px;
   height: 200px;
   background-color: #fff;
   border-radius: 40px;
+}
+.wrap .thirdPage {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 50px;
+}
+.wrap .thirdPage h2 {
+  font-size: 45px;
+  font-weight: 500;
+}
+.wrap .thirdPage p {
+  color: #4F4F4F;
+}
+.wrap .thirdPage .photoContainer {
+  width: 100%;
+  display: flex;
+  min-height: 75vh;
+}
+.wrap .thirdPage .photoContainer .leftPhotoContainer {
+  width: 50%;
+  min-height: 75vh;
+  padding: 10px;
+}
+.wrap .thirdPage .photoContainer .leftPhotoContainer .topPhoto {
+  width: 100%;
+  height: 40vh;
+  background-image: url("./main_img/Group 15.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+}
+.wrap .thirdPage .photoContainer .leftPhotoContainer .bottomPhoto {
+  width: 100%;
+  height: 35vh;
+  background-image: url("./main_img/high-angle-desk-arrangement-with-plants.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.wrap .thirdPage .photoContainer .rightPhotoContainer {
+  border-radius: 30px;
+  margin-top: 10px;
+  width: 50%;
+  height: 76vh;
+  background-image: url("./main_img/unsplash_MBsReSZ2WNM.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.wrap .fourthPage {
+  width: 100%;
+  min-height: 70vh;
+  padding: 50px;
+  display: flex;
+}
+.wrap .fourthPage h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.wrap .fourthPage p {
+  color: #4F4F4F;
+  margin-top: 20px;
+}
+.wrap .fourthPage .leftContentContainer {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .fourthPage .leftContentContainer .contentItem {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.wrap .fourthPage .leftContentContainer .contentItem .svgContainer {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .fourthPage .leftContentContainer .contentItem .content h5 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrap .fourthPage .leftContentContainer .contentItem .content p {
+  margin-top: 10px;
+  color: #4F4F4F;
+}
+.wrap .fourthPage .rightPhoto {
+  width: 50%;
+  height: 60vh;
+  background-image: url("./main_img/unsplash_sEApBUS4fIk.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 1330px) {
@@ -294,7 +391,27 @@
     justify-content: center;
   }
 }
+@media screen and (max-width: 1000px) {
+  .wrap .fourthPage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap .fourthPage .leftContentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .wrap .fourthPage .rightPhoto {
+    margin-top: 50px;
+  }
+}
 @media screen and (max-width: 827px) {
+  .wrap .firstPage {
+    padding: 20px;
+  }
   .wrap .firstPage header ul {
     display: none;
   }
@@ -317,8 +434,34 @@
     cursor: pointer;
     margin-top: 20px;
   }
+  .wrap .secondPage {
+    padding: 20px;
+  }
   .wrap .secondPage .serviceDetailsContainer {
     flex-direction: column;
     align-items: normal;
+  }
+  .wrap .thirdPage {
+    padding: 20px;
+  }
+  .wrap .thirdPage .photoContainer {
+    flex-direction: column;
+  }
+  .wrap .thirdPage .photoContainer .leftPhotoContainer {
+    width: 100%;
+  }
+  .wrap .thirdPage .photoContainer .leftPhotoContainer .topPhoto {
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+  }
+  .wrap .thirdPage .photoContainer .leftPhotoContainer .bottomPhoto {
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+  }
+  .wrap .thirdPage .photoContainer .rightPhotoContainer {
+    width: 100%;
+    height: 50vh;
   }
 }/*# sourceMappingURL=style.css.map */
