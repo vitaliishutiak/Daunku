@@ -21,8 +21,23 @@ $("#burger").click(function () {
       height: "10vh",
       "flex-direction": "row",
       "justify-content": "space-between;",
-      backgroundColor: 'transparent' // Видаляємо бекграунд
+      backgroundColor: 'transparent'
     });
     $("#burger").css("display", "flex");
     $("#exitBurger, ul").css("display", "none");
+  });
+
+
+  let lastScrollTop = 0;
+
+  $(window).scroll(function () {
+    let st = $(this).scrollTop();
+  
+    if (st > lastScrollTop && st > 0) {
+
+      $("header").css("backgroundColor", "#000");
+    } else if (st === 0) {
+
+      $("header").css("backgroundColor", "transparent");
+    }
   });
