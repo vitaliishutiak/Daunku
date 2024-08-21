@@ -5,12 +5,191 @@
     font-family: 'Work Sans';
 }
 
+
+.notificationPopap {
+    width: 400px;
+    height: 100px;
+    background-color: #000000d5;
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 11;
+    border-radius: 10px;
+  }
+
+.cardPopap{
+    width: 23%;
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0, 0.5);
+    right: -23%;
+    padding: 20px;
+    transition: 1s;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    border-left: 1px solid#000;
+    .topCardContainer{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+        h5{
+            font-size: 22px;
+            font-weight: 500;
+            color: #fff;
+        }
+        p{
+            font-size: 18px;
+            color: #fff;
+        }
+        i{
+            color: #fff;
+            cursor: pointer;
+            font-size: 25px;
+        }
+    }
+    .popapProductContainer{
+        width: 100%;
+        height: 60vh;
+        .saleProductItem{
+            width: 100%;
+            height: 35px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            color: #3a3a3a;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px 0 10px;
+           
+
+            .item{
+                width: 50px;
+                h4{
+                    font-weight: 500;
+                    color: #fff;
+                }
+                .sum{
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: red;
+                }
+                button{
+                    cursor: pointer;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 20px;
+                    background-image: linear-gradient(to right, #2AF699, #009EFD);
+                    display: flex;
+                    i{
+                        color: red;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .inputPopapContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(77, 76, 76, 0.5);
+            color: #fff;
+          }
+
+          input:focus {
+            outline: 1px solid #fff;
+          }
+
+          input::placeholder{
+            color: #fff;
+          }
+          
+        .buyBtn{
+            color: #fff;
+            padding: 10px 20px;
+            background-image: linear-gradient(to right, #2AF699, #009EFD);
+            border-radius: 20px;
+            margin-top: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 50px;
+            i{
+                font-size: 14px;
+                color: #fff;
+            }
+        }
+    }
+   
+}
+
+.securityPopap{
+    width: 400px;
+    height: 250px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0, 0.5);
+    border-radius: 20px;
+    position: fixed;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -125px;
+    h3{
+        color: #fff;
+        font-weight: 500;
+    }
+    input{
+        width: 300px;
+        height: 50px;
+        border-radius: 5px;
+        padding-left: 10px;
+        border: none;
+    }
+    button{
+        padding: 10px 30px;
+        border: none;
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
 .wrap{
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #f6f6f6;
+    overflow-x: hidden;
 
     .firstPage{
         width: 100%;
@@ -20,7 +199,7 @@
         background-image: url('./main_img/modern-living-room-interior-with-sofa-green-plants-lamp-table-dark-wall-background\ 1.jpg');
         background-position: center;
         background-size: cover;
-
+        
         header{
             width: 100%;
             height: 10vh;
@@ -31,7 +210,7 @@
             transition: .2s;
             position: fixed;
             top: 0;
-            z-index: 2;
+            z-index: 3;
             .logo{
                 cursor: pointer;
             }
@@ -62,7 +241,7 @@
                 display: flex;
                 cursor: pointer;
 
-                .current{
+                .count{
                     width: 23px;
                     height: 23px;
                     display: flex;
@@ -208,96 +387,47 @@
                 align-items: center;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                .productCard1{
+                .productCard{
+
                     width: 300px;
                     height: 400px;
                     background-color: #C1D0E4;
                     display: flex;
-                    align-items: flex-end;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
                     border-radius: 40px;
                     margin: 50px 10px;
 
-                    .productCardContent1{
+                    .productCardContent{
+                        padding: 40px 20px;
                         width: 300px;
                         height: 200px;
                         background-color: #fff;
                         border-radius: 40px;
-                    }
-                }
-                .productCard2{
-                    width: 300px;
-                    height: 400px;
-                    background-color: #C1D0E4;
-                    display: flex;
-                    align-items: flex-end;
-                    border-radius: 40px;
-                    margin: 50px 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        h4{
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                        i{
+                            color: #fdca00;
+                        }
+                        button{
+                            background-image: linear-gradient(to right, #2AF699, #009EFD);
+                            height: 25px;
+                            border-radius: 20px;
+                            border: none;
+                            color: #fff;
+                            cursor: pointer;
 
-                    .productCardContent2{
-                        width: 300px;
-                        height: 200px;
-                        background-color: #fff;
-                        border-radius: 40px;
-                    }
-                }
-                .productCard3{
-                    width: 300px;
-                    height: 400px;
-                    background-color: #C1D0E4;
-                    display: flex;
-                    align-items: flex-end;
-                    border-radius: 40px;
-                    margin: 50px 10px;
-                    .productCardContent3{
-                        width: 300px;
-                        height: 200px;
-                        background-color: #fff;
-                        border-radius: 40px;
-                    }
-                }
-                .productCard4{
-                    width: 300px;
-                    height: 400px;
-                    background-color: #C1D0E4;
-                    display: flex;
-                    align-items: flex-end;
-                    border-radius: 40px;
-                    margin: 50px 10px;
-                    .productCardContent4{
-                        width: 300px;
-                        height: 250px;
-                        background-color: #fff;
-                        border-radius: 40px;
-                    }
-                }
-                .productCard5{
-                    width: 300px;
-                    height: 400px;
-                    background-color: #C1D0E4;
-                    display: flex;
-                    align-items: flex-end;
-                    border-radius: 40px;
-                    margin: 50px 10px;
-                    .productCardContent5{
-                        width: 300px;
-                        height: 250px;
-                        background-color: #fff;
-                        border-radius: 40px;
-                    }
-                }
-                .productCard6{
-                    width: 300px;
-                    height: 400px;
-                    background-color: #C1D0E4;
-                    display: flex;
-                    align-items: flex-end;
-                    border-radius: 40px;
-                    margin: 50px 10px;
-                    .productCardContent6{
-                        width: 300px;
-                        height: 200px;
-                        background-color: #fff;
-                        border-radius: 40px;
+                            i{
+                                color: #fff;
+                               
+                            }
+                        }
                     }
                 }
             }
@@ -306,7 +436,7 @@
 
     .thirdPage{
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         text-align: center;
         padding: 50px;
         h2{
@@ -420,6 +550,88 @@
         }
     }
 
+    footer{
+        width: 100%;
+        min-height: 40vh;
+        background-image: linear-gradient(to right, #566270, #283444);
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        .contentFooterContainer{
+            display: flex;
+            width:100%;
+            min-height: 20vh;
+            padding: 20px 0;
+            border-bottom: 1px solid #fff;
+
+            .inputContainer{
+                width: 40%;
+                h2{
+                    color: #fff;
+                    font-size: 30px;
+                    font-weight: 400;
+                }
+                .mailContainer{
+                    display: flex;
+                    align-items: center;
+
+                    input{
+                        width:340px;
+                        height: 50px;
+                        border-radius: 30px;
+                        margin-top: 50px;
+                        padding: 0 130px 0 10px;
+                        backdrop-filter: blur(1px);
+                        background-color: rgba(213, 213, 213, 0.3);
+                        border: none;
+                        color: #fff;
+                        outline: none;
+                    }
+
+                    input::placeholder{
+                        color: #fff;
+                    }
+                    
+                    button{
+                        border-radius: 20px;
+                        margin-top: 50px;
+                        padding: 10px 20px;
+                        margin-left: -115px;
+                        background-image: linear-gradient(to right, #2AF699, #009EFD);
+                        border: none;
+                        z-index: 1;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .infoContainer{
+                width: 20%;
+                height: 15vh;
+                h3{
+                    color: #fff;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    list-style: none;
+                    li{
+                        margin-top: 20px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        h4{
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 1330px){
@@ -440,6 +652,7 @@
                 }
             }
         }
+     
     }
 }
 
@@ -459,7 +672,8 @@
             margin-top: 50px;
         }
         .rightPhoto{
-            margin-top: 50px;
+            margin-top: 100px;
+            width: 100%;
         }
     }
 }
@@ -469,7 +683,7 @@
     .wrap{
 
        .firstPage{
-        padding: 20px;
+
         header{
             ul{
                 display: none;
@@ -478,11 +692,7 @@
                 }
             }
 
-            .cartContainer{
-
-                display: none;
-            }
-
+           
             #burger{
                 display: flex;
                 font-size: 30px;
@@ -504,7 +714,10 @@
         padding: 20px;
         .serviceDetailsContainer{
             flex-direction: column;
-            align-items: normal;
+            align-items: center;
+            .serviceDetails{
+                width: 200px;
+            }
         }
     }
 
@@ -528,6 +741,34 @@
             .rightPhotoContainer{
                 width: 100%;
                 height: 50vh;
+            }
+        }
+    }
+    footer {
+        text-align: center;
+        padding: 10px;
+
+        .contentFooterContainer {
+            flex-direction: column;
+            align-items: center;
+
+            .inputContainer {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .mailContainer input {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                .mailContainer button {
+                    margin-top: 20px;
+                }
+            }
+
+            .infoContainer {
+                width: 100%;
+            
             }
         }
     }

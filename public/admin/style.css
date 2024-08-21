@@ -1,1 +1,339 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.wrap header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  padding: 20px 50px 0;
+  background-color: rgb(41, 41, 41);
+  justify-content: space-between;
+}
+.wrap header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.wrap header ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  margin: 0 60px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+  color: #fff;
+}
+.wrap header ul li.active {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.wrap header select {
+  padding: 5px 5px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.wrap .homePage {
+  display: flex;
+  padding: 0 50px;
+  width: 100%;
+  height: 85vh;
+  background-color: #e7e7e7;
+}
+.wrap .homePage .productsPanel {
+  padding: 20px;
+  margin-top: -20px;
+  width: 20%;
+  height: 80vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrap .homePage .productsPanel .custom-uploadAdminPhoto-button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .homePage .productsPanel h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.wrap .homePage .productsPanel img {
+  border-radius: 50%;
+}
+.wrap .homePage .productsPanel input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Додавання вдавлення */
+}
+.wrap .homePage .productsPanel input:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+.wrap .homePage .productsPanel .custom-upload-button {
+  display: flex;
+  padding: 10px 45px;
+  align-items: center;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.wrap .homePage .productsPanel .custom-upload-button i {
+  margin: 0 10px;
+}
+.wrap .homePage .productsPanel .custom-upload-button:hover {
+  background-color: #2980b9;
+}
+.wrap .homePage .productsPanel button {
+  width: 250px;
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  color: #000000;
+  cursor: pointer;
+}
+.wrap .homePage .productsPanel button i {
+  color: #000000;
+}
+.wrap .homePage .productsPage {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  padding: 0 0 0 50px;
+  flex-direction: column;
+}
+.wrap .homePage .productsPage .productsContainer {
+  width: 100%;
+  min-height: 80%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  flex-direction: column;
+}
+.wrap .homePage .productsPage .productsContainer .plantsItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); /* Додавання вдавлення */
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #000;
+}
+.wrap .homePage .productsPage .productsContainer .plantsItem .itemPants {
+  width: 50px;
+  display: flex;
+}
+.wrap .homePage .productsPage .productsContainer .plantsItem .itemPants p {
+  margin-left: 10px;
+}
+.wrap .homePage .productsPage .productsContainer .plantsItem .itemPants button {
+  display: flex;
+  margin-left: -32px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.wrap .homePage .productsPage .productsContainer .plantsItem .itemPants button i {
+  color: red;
+  margin-right: 5px;
+}
+.wrap .homePage .ordersPage {
+  width: 100%;
+  min-height: 85vh;
+  display: none;
+  padding: 20px 0 50px 50px;
+}
+.wrap .homePage .ordersPage .ordersContainer {
+  width: 100%;
+  background-color: #e7e7e7;
+  flex-direction: column;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .item1 {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .item1 h4 {
+  font-size: 18px;
+  color: #333;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .item1 p {
+  font-size: 16px;
+  color: #555;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .item2 {
+  width: 200px;
+  display: flex;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .item2 h4 {
+  font-size: 18px;
+  color: #333;
+  margin-left: 15px;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .item2 p {
+  font-size: 16px;
+  color: #555;
+  margin-left: 10px;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .confirmBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+.wrap .homePage .ordersPage .ordersContainer .buyItem .confirmBtn:hover {
+  background-color: #0062cc;
+}
+.wrap .homePage .contactsPage {
+  display: none;
+  width: 100%;
+  padding: 20px 0 50px 50px;
+  height: 85vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .homePage .contactsPage .contactsContainer {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.wrap .homePage .contactsPage .contactsContainer h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.wrap .homePage .contactsPage .contactsContainer input {
+  width: 350px;
+  height: 40px;
+  margin-top: 25px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+}
+.wrap .homePage .contactsPage .contactsContainer button {
+  width: 350px;
+  height: 40px;
+  margin-top: 50px;
+}
+.wrap .homePage .contactsPage .contactsContainer button i {
+  padding-right: 10px;
+}
+.wrap .homePage .messagePage {
+  display: none;
+  width: 100%;
+  height: 85vh;
+  padding: 20px 50px 50px 50px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrap .homePage .messagePage .messageContainer {
+  width: 400px;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.wrap .homePage .messagePage .messageContainer h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.wrap .homePage .messagePage .messageContainer textarea {
+  width: 350px;
+  height: 200px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 10px;
+}
+.wrap .homePage .messagePage .messageContainer button {
+  background-color: #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.wrap .homePage .loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin-top: 50px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

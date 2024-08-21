@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daunku</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.js' integrity='sha512-pmaEGtUAy7E5gRmwjLqQAD/QWw0dL4Z59b6b+2HQkqQwQ+HcPLLb9/KbUNo5zr10WuXmbivK9nYVZOyDkMgZMg==' crossorigin='anonymous'></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css' integrity='sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA==' crossorigin='anonymous'/>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
 </head>
 <body>
+    <div class="notificationPopap">
+    </div>
+    <div class="cardPopap">
+        <div class="topCardContainer">
+        <h5>Total amount:</h5><p class="totalAmount">0</p> <i id="exitPopap" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="popapProductContainer"></div>
+        <div class="inputPopapContainer"> 
+            <input type="text" id="name" placeholder="name">
+            <input type="text" id="phone" placeholder="phone">
+            <input type="text" id="addres" placeholder="addres">
+            <button class="buyBtn" id="buyBtn"><i class="fa-solid fa-cart-shopping"></i> Buy</i></button></div>
+       
+    </div>
+    <div class="securityPopap">
+        <h3>Enter the code from your email</h3>
+        <input type="text" id="textCode" placeholder="code">
+        <button id="sendCode">send code</button>
+    </div>
     <div class="wrap">
         
         <div class="firstPage">
@@ -59,8 +79,8 @@
                     </defs>
                 </svg>
 
-                <div class="current">
-                    1
+                <div class="count">
+                    0
                 </div>
 
             </div>
@@ -235,30 +255,6 @@
                    </p>
                 </div>
                 <div class="productCardContainer">
-                    <div class="productCard1">
-                        
-                        <div class="productCardContent1"></div>
-                    </div>
-                    <div class="productCard2">
-
-                        <div class="productCardContent2"></div>
-                    </div>
-                    <div class="productCard3">
-
-                        <div class="productCardContent3"></div>
-                    </div>
-                    <div class="productCard4">
-
-                        <div class="productCardContent4"></div>
-                    </div>
-                    <div class="productCard5">
-
-                        <div class="productCardContent5"></div>
-                    </div>
-                    <div class="productCard6">
-
-                        <div class="productCardContent6"></div>
-                    </div>
                 </div>
             </div>
  
@@ -429,6 +425,63 @@
 
             <div class="rightPhoto"></div>
         </div>
+
+        <footer>
+
+            <div class="contentFooterContainer">
+                
+                <div class="inputContainer">
+                    <h2>Newslatter</h2>
+                    <div class="mailContainer">
+                        <input placeholder="Enter your email" id="email" type="text">
+                    <button id="mailBtn">Subscribe</button>
+                    </div>
+                </div>
+
+                <div class="infoContainer">
+                    <h3>Support</h3>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Careers</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div class="infoContainer">
+                    <h3>Useful link</h3>
+                    <ul>
+                        <li>
+                            Payment & Tax
+                        </li>
+                        <li>
+                            Team of servise
+                        </li>
+                        <li>
+                            Privaci Policy
+                        </li>
+                    </ul>
+                </div>
+                <div class="infoContainer">
+                    <h3>Our Menu</h3>
+                    <ul>
+                        <li>Best product</li>
+                        <li>Category</li>
+                    </ul>
+                </div>
+                <div class="infoContainer">
+                    <h3>Addres</h3>
+                    <ul>
+                        <li class="footerAddress"></li>
+                            <li class="footerEmail"></li>
+                            <li class="footerPhone"></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <h4 >© <span class="dateNow"></span> Daunku - All rights reserved.</h4>
+
+        </footer>
 
      </div>
  
